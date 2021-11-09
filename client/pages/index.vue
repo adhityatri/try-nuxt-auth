@@ -22,13 +22,26 @@
         >
           GitHub
         </a>
+        <a @click="handleLogout" rel="noopener noreferrer" class="button--grey">
+          Logout
+        </a>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  mounted() {
+    console.log(this.$auth)
+  },
+  methods: {
+    handleLogout() {
+      this.$auth.logout()
+      this.$router.push('/login')
+    },
+  },
+}
 </script>
 
 <style>

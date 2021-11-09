@@ -1,11 +1,14 @@
 {
   "name": "nuxt-auth",
   "template": "Nuxt.js",
-  "modules": [],
+  "modules": [
+    "axios",
+    "vuex"
+  ],
   "renderingMode": "universal",
   "deployTarget": "server",
   "isConfigured": {
-    "client": false,
-    "server": false
+    "client": true,
+    "server": true
   }
 }
